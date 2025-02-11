@@ -108,7 +108,7 @@ const Profile = () => {
                         :
                         <>
                         <h2 className={css.title} >Skills</h2>
-                        <div style={{ display:'flex', gap:'10px' }} >
+                        <div style={{ display:'flex', gap:'10px',flexWrap:'wrap' }} >
                             {user?.profile?.skills.map((item,idx)=>(
                                 <span  key={idx}  className={css.skills}>{item}</span>
                             ))}
