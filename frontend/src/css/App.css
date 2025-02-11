@@ -1,0 +1,252 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color:white;
+  --thin-border-color:#9999;
+  --sec-btn-bg-color:black;
+  --sec-btn-hover-bg-color:#272727;
+  --box-shadow-color:rgba(0, 0, 0, 0.4);
+  --txt-color:black;
+  --card-bg-color:beige;
+  --job-bg-color:white;
+  --popover-bg:whitesmoke;
+  --job-pg-bg:rgb(211 211 211 / 53%);
+  --hover-color:rgb(231 231 231 / 69%);
+  --form-bg-color:white
+}
+.dark_mode{
+  --bg-color:#181818;
+  --thin-border-color:#9999;
+  --sec-btn-bg-color: #4A90E2;
+  --sec-btn-hover-bg-color:#5DAEFF;
+  --box-shadow-color:rgba(0, 0, 0, 0.4);
+  --txt-color:#E0E0E0;
+  --card-bg-color:#272727;
+  --job-bg-color:#272727;
+  --popover-bg:#1E1E1E;
+  --job-pg-bg:#181818;
+  --hover-color:#272727;
+  --form-bg-color:#1E1E1E;
+}
+
+
+body{
+  min-height: 100vh;
+  font-family:'Arial Narrow', Arial, sans-serif;
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+}
+
+
+/*Scrollbar  */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar */
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(180, 182, 183, 0.638); /* Customize scrollbar thumb color */
+  border-radius: 4px; /* Round edges */
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: rgba(180, 164, 164, 0.507); /* Customize track color */
+}
+
+
+/* global class */
+.link{
+  color: black;
+  text-decoration: none;
+  font-size: 19px;
+}
+button{
+  cursor: pointer;
+}
+.material-symbols-outlined{
+  cursor: pointer;
+}
+.hover-effect:hover{
+  background-color: #5DAEFF !important;
+}
+.pending{
+  color: #181818;
+  background-color: #9999;
+}
+.accepted{
+  color: #181818;
+  background-color: lightgreen;
+}
+.rejected{
+  color: #181818;
+  background-color: lightcoral;
+}
+
+/*  */
+.fieldCont{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 35vw;
+}
+.fieldbox{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+input,select,textarea{
+  border: 1px solid var(--thin-border-color);
+  border-radius: 5px;
+  padding: 7px 10px;
+  font-size: 16px;
+  outline: none;
+  background-color: var(--job-bg-color);
+  color: var(--txt-color);
+}
+label{
+  font-weight: 600;
+  font-size: 17px;
+}
+
+
+.submitbtn{
+  background-color: var(--sec-btn-bg-color);
+  color: white;
+  font-size: 17px;
+  padding: 10px 8px;
+  border-radius: 10px;
+  border: none;
+  &:hover{
+    background-color: var(--sec-btn-hover-bg-color);
+  }
+}
+.myhover{
+  background-color: var(--job-bg-color);
+  &:hover{
+    background-color: var(--popover-bg);
+  }
+}
+.formBg{
+  background-color:var(--form-bg-color);
+}
+
+/* card */
+.badgeWrap{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge{
+  border: 1px solid var(--thin-border-color);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.badge{
+  color:#4A90E2;
+}
+
+/*Loader */
+.loaderwrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 100;
+  padding-block: 13px;
+}
+.loader {
+  width: 18px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  transform: rotate(45deg);}
+.loader::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid white;
+  animation: l18 2s infinite linear;
+}
+@keyframes l18 {
+    0%   {clip-path:polygon(50% 50%,0 0,0    0,0    0   ,0    0   ,0    0   )}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0   ,100% 0   ,100% 0   )}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0    100%,0    100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0    100%,0    0   )}
+}
+
+/* color css */
+.bg-w{
+  background-color: var(--job-bg-color);
+}
+.bg-p{
+  background-color: #4A90E2;
+}
+.bg-b{
+  background-color: black;
+}
+.c-w{
+  color: var(--txt-color) ;
+}
+
+/* footer */
+@media (max-width:320px) {
+  .footerNavLink{
+    display: grid;
+    row-gap: 5px;
+  }
+}
+
+
+/* job desc */
+.jobDescMain{
+  background-color: var(--bg-color);
+  padding: 20px 100px
+}
+@media (max-width:700px) {
+  .jobDescMain{
+    padding-inline: 20px;
+  }
+}
+
+
+/* recruiter  */
+@media (max-width:1100px) {
+  .recMain{
+    padding-inline: 30px !important;
+  }
+  .postJobWrap{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+  }
+  .formBg{
+    min-width: 100% !important;
+  }
+}
+@media (max-width:600px) {
+  .recMain{
+    padding-inline: 20px !important;
+  }
+  .topBox{
+    flex-direction: column-reverse ;
+  }
+
+  .submitbtn{
+    font-size: 12px;
+  }
+  .formBox{
+    width: 100vw !important;
+    font-size: 12px;
+  }
+  .formBox button{
+    font-size: 12px !important;
+  }
+}

@@ -1,0 +1,45 @@
+.content{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 10px;
+}
+
+form{
+    border: 1px solid var(--thin-border-color);
+    padding: 20px 15px;
+    border-radius: 8px;
+    max-width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 400px;
+}
+
+.roleOptions{
+    display: flex;
+    gap: 40px;    
+    padding-block: 10px;
+}
+.rolebox{
+    display: flex;
+    gap: 8px;
+}
+.query{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width:500px) {
+    form{
+        min-width: 100vw;
+    }
+    form h1{
+        font-size: 22px !important;
+    }
+}

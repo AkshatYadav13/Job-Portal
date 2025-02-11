@@ -1,0 +1,174 @@
+.main {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  flex-direction: column;
+  gap: 60px;
+  padding-inline: 12vw;
+}
+.first{
+  margin-inline: 120px;
+  border: 1px solid #9999;
+  border-radius: 10px;
+  padding: 30px 20px;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.editProfileBtn{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap:10px;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: var(--popover-bg);
+  &:hover{
+    background-color: var(--hover-color);
+  }  
+}
+.topwrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap:15px
+}
+.idwrap {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.contactwrap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contactbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.title {
+  margin-bottom: 10px;
+}
+.second{
+  margin-inline: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  
+}
+.table{
+  border: 1px solid #9999;
+  border-radius: 8px;
+  min-width: 500px;
+}
+.row{
+  padding: 15px ;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1.5fr 1.5fr 1fr;
+  column-gap: 25px;
+  border-bottom: 1px solid #9999;
+  &:hover{
+    cursor: pointer;
+    background-color: var(--hover-color);
+  }
+}
+.row p{
+  font-size: 18px;
+}
+.row:last-child {
+  border-bottom: none;
+}
+.heading h3{
+  color: gray;
+}
+.status{
+  border-radius: 10px;
+  color:black;
+  padding:2px 8px;
+}
+
+/*update profile  */
+.updateProfile{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3534349e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.container{
+  background-color: var(--popover-bg);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+.topbox{
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+form{
+  border: none;
+  width: 100%;
+}
+.field{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  column-gap: 10px;
+  flex-wrap: wrap;
+}
+.updatebtnbox{
+  display: flex;
+  justify-content: flex-end;
+}
+.skills{
+  background-color:var(--sec-btn-bg-color);
+  color: white;
+  padding:5px 15px;
+  border-radius:15px
+}
+
+@media (max-width:800px) {
+  .main{
+    padding-inline: 3vw;
+  }
+  .first{
+    margin-inline: 0px;
+  }
+  .second{
+    margin-inline: 0px;
+  }
+  .tableWrap{
+    overflow-x: scroll;
+  }
+  .field input[type='file']{
+    max-width: 230px;
+    font-size: 12px;
+  }
+  .field{
+    font-size: 14px;
+  }
+}
+@media (max-width:400px){
+  .nameBox >h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .nameBox >p{
+    font-size: 15px;
+  }
+  .contactwrap h2{
+    font-size: 20px;
+  }
+  .updatebtnbox button{
+    font-size: 13px;
+  }
+}
